@@ -3,4 +3,5 @@ img {
     max-width: 960px;
     min-height: 480px;
     display: block;
+    border: 1px solid;
 }
