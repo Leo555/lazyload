@@ -1,8 +1,8 @@
 function isInSight(el) {
     const clientHeight = window.innerHeight // 获取屏幕可视窗口高度
     const scrollTop = document.body.scrollTop // 滚动条滚动的距离
-    // el.offsetTop 元素相对于文档顶部的距离 
-    // +100是为了提前加载
+        // el.offsetTop 元素相对于文档顶部的距离 
+        // +100是为了提前加载
     return el.offsetTop <= clientHeight + scrollTop + 100
 }
 
@@ -45,4 +45,9 @@ const io = new IntersectionObserver(ioes => {
 function checkImgs2() {
     const imgs = Array.from(document.querySelectorAll('img[data-src]'))
     imgs.forEach(item => io.observe(item))
+}
+
+function backToTop() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
 }
