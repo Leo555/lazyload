@@ -17,7 +17,7 @@ h2 {
 }
 
 #root > img {
-    max-width: 960px;
+    width: 960px;
     min-height: 480px;
     display: block;
     border: 1px solid;
