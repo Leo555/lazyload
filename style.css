@@ -2,12 +2,28 @@
     margin: 0;
 }
 
+h1 {
+    font-size: 500%;
+    line-height: 1;
+    text-transform: lowercase;
+    margin-top: 60px;
+    text-align: center;
+    color: slategray;
+}
+
+h2 {
+	text-align: center;
+	line-height: 1.5;
+}
+
 #root > img {
-    margin-bottom: 100px;
     max-width: 960px;
     min-height: 480px;
     display: block;
     border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
 
 .github-ribbon {
