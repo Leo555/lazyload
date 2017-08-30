@@ -21,7 +21,25 @@ function loadImg(el) {
     }
 }
 
-function checkImgs() {
+function throttle(fn, mustRun = 500) {
+    const timer = null
+    let previous = null
+    return function() {
+        const now = new Date()
+        const context = this
+        const args = arguments
+        if (!previous) {
+            previous = now
+        }
+        const remaining = now - previous
+        if (mustRun && remaining >= mustRun) {
+            fn.apply(context, args)
+            previous = now
+        }
+    }
+}
+
+function checkImgs2() {
     const imgs = document.querySelectorAll('img[data-src]')
     Array.from(imgs).forEach(el => {
         if (isInSight1(el)) {
@@ -31,21 +49,24 @@ function checkImgs() {
 
 }
 
-const io = new IntersectionObserver(ioes => {
-    ioes.forEach(ioe => {
-        const el = ioe.target
-        const intersectionRatio = ioe.intersectionRatio
-        if (intersectionRatio > 0 && intersectionRatio <= 1) {
-            loadImg(el)
-        }
-        el.onload = el.onerror = () => io.unobserve(el)
-    })
-})
-
-function checkImgs2() {
-    if (!io) {
+function checkImgs() {
+    if (!window.hasOwnProperty('IntersectionObserver')) {
         alert('您的浏览器不资辞 IntersectionObserver')
+        checkImgs2()
+        window.onscroll = throttle(checkImgs2)
+        return
     }
+    const io = new IntersectionObserver(ioes => {
+        ioes.forEach(ioe => {
+            const el = ioe.target
+            const intersectionRatio = ioe.intersectionRatio
+            if (intersectionRatio > 0 && intersectionRatio <= 1) {
+                loadImg(el)
+            }
+            el.onload = el.onerror = () => io.unobserve(el)
+        })
+    })
+
     const imgs = Array.from(document.querySelectorAll('img[data-src]'))
     imgs.forEach(item => io.observe(item))
 }
