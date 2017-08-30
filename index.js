@@ -72,6 +72,12 @@ function checkImgs() {
 }
 
 function backToTop() {
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
+    let time = setInterval(() => {
+        let osTop = document.documentElement.scrollTop || document.body.scrollTop
+        let speed = Math.floor(-osTop / 10)
+        document.documentElement.scrollTop = document.body.scrollTop = osTop + speed
+        if (osTop == 0) {
+            clearInterval(time)
+        }
+    }, 10)
 }
