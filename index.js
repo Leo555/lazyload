@@ -12,6 +12,14 @@ function isInSight1(el) {
     return bound.top <= clientHeight + 100
 }
 
+function loadImg(el) {
+    if (!el.src) {
+        const source = el.dataset.src
+        el.src = source
+        console.log(el.src)
+        el.removeAttribute('data-src')
+    }
+}
 
 function checkImgs() {
     const imgs = document.querySelectorAll('img[data-src]')
@@ -21,14 +29,6 @@ function checkImgs() {
         }
     })
 
-}
-
-function loadImg(el) {
-    if (!el.src) {
-        const source = el.dataset.src
-        el.src = source
-        el.removeAttribute('data-src')
-    }
 }
 
 const io = new IntersectionObserver(ioes => {
@@ -43,6 +43,9 @@ const io = new IntersectionObserver(ioes => {
 })
 
 function checkImgs2() {
+    if (!io) {
+        alert('您的浏览器不资辞 IntersectionObserver')
+    }
     const imgs = Array.from(document.querySelectorAll('img[data-src]'))
     imgs.forEach(item => io.observe(item))
 }
