@@ -21,7 +21,7 @@ Lazyload 可以加快网页访问速度，减少请求，实现思路就是判�
 
 示意图如下：
 
-<img src="/assets/img/lazyload.svg" alt="lazyload.svg">
+<img src="./images/lazyload.svg" alt="lazyload.svg">
 
 代码如下：
 
@@ -41,7 +41,7 @@ function isInSight(el) {
 
 示意图如下：
 
-<img src="/assets/img/lazyload1.svg" alt="lazyload1.svg">
+<img src="./images/lazyload1.svg" alt="lazyload1.svg">
 
 getBoundingClientRect() 方法返回一个 ClientRect 对象，里面包含元素的位置和大小的信息
 
