@@ -208,8 +208,12 @@ Intersection Observer API 会注册一个回调方法，每当期望被监视的
 4. [MDN-Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API#Browser_compatibility)
 
 <br>
+
+
 ---
 
 > Website [lz5z.com](https://lz5z.com) &nbsp;&middot;&nbsp;
 > GitHub [@Leo555](https://github.com/Leo555) &nbsp;&middot;&nbsp;
-> demo [lazyload](https://lz5z.com/lazyload) &nbsp;&middot;&nbsp;
+> demo [lazyload](https://lz5z.com/lazyload)
+
+
