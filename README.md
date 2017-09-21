@@ -206,3 +206,8 @@ Intersection Observer API 会注册一个回调方法，每当期望被监视的
 2. [IntersectionObserver](https://github.com/justjavac/the-front-end-knowledge-you-may-dont-know/issues/10)
 3. [IntersectionObserver API 使用教程](http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html)
 4. [MDN-Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API#Browser_compatibility)
+
+---
+
+> [lz5z.com](https://lz5z.com) &nbsp;&middot;&nbsp;
+> GitHub [@Leo555](https://github.com/Leo555) &nbsp;&middot;&nbsp;
