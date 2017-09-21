@@ -209,5 +209,6 @@ Intersection Observer API 会注册一个回调方法，每当期望被监视的
 
 ---
 
-> [lz5z.com](https://lz5z.com) &nbsp;&middot;&nbsp;
+> Website [lz5z.com](https://lz5z.com) &nbsp;&middot;&nbsp;
 > GitHub [@Leo555](https://github.com/Leo555) &nbsp;&middot;&nbsp;
+> demo [lazyload](https://lz5z.com/lazyload) &nbsp;&middot;&nbsp;
